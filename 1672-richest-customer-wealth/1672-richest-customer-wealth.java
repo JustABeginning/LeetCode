@@ -1,4 +1,3 @@
-import java.util.Arrays;
 class Solution {
     public int maximumWealth(int[][] accounts) {
         int r=accounts.length,c=accounts[0].length;
