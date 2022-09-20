@@ -6,11 +6,10 @@ class Solution {
         for(int i=0;i<r;i++)
             for(int j=0;j<c;j++)
                 arr[i]+=accounts[i][j];
-        //int max=arr[0];
-        //for(int i=1;i<r;i++)
-        //    if(arr[i]>max)
-        //        max=arr[i];
-        Arrays.sort(arr);
-        return arr[r-1];
+        int max=arr[0];
+        for(int i=1;i<r;i++)
+            if(arr[i]>max)
+                max=arr[i];
+        return max;
     }
 }
