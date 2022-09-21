@@ -4,15 +4,12 @@ class Solution {
         int l=s.length();
         if(l>1){
             int skp=1;
-            outer:
             for(int i=0;i<l;i++){
                 for(int j=i+skp;j<=l;j++){
                     String t=s.substring(i,j);
                     int n=t.length();
                     if(isPalin(t)&&n>res.length()){
                         res=t;
-                        if(n==l)
-                            break outer;
                         skp=n;
                     }
                 }
