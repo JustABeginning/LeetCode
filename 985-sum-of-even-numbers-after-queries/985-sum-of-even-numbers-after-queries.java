@@ -7,12 +7,12 @@ class Solution {
                 s+=nums[j];
         int[] arr=new int[r];
         for(int i=0;i<r;i++){
-            int x=queries[i][1];
-            if((nums[x]&1)==0)
-                s-=nums[x];
-            nums[x]+=queries[i][0];
-            if((nums[x]&1)==0)
-                s+=nums[x];
+            //int x=queries[i][1];
+            if((nums[queries[i][1]]&1)==0)
+                s-=nums[queries[i][1]];
+            nums[queries[i][1]]+=queries[i][0];
+            if((nums[queries[i][1]]&1)==0)
+                s+=nums[queries[i][1]];
             arr[i]=s;
         }
         return arr;
