@@ -1,4 +1,3 @@
-import java.util.HashMap;
 class Solution {
     public int[] sumEvenAfterQueries(int[] nums, int[][] queries) {
         int l=nums.length,r=queries.length;
