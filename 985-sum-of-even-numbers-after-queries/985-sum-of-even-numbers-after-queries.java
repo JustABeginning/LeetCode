@@ -12,14 +12,16 @@ class Solution {
         }
         int[] arr=new int[r];
         for(int i=0;i<r;i++){
-            nums[queries[i][1]]+=queries[i][0];
-            if(map.containsKey(queries[i][1])){
-                s-=map.get(queries[i][1]);
-                map.remove(queries[i][1]);
+            int x=queries[i][1];
+            nums[x]+=queries[i][0];
+            int y=nums[x];
+            if(map.containsKey(x)){
+                s-=map.get(x);
+                map.remove(x);
             }
-            if((nums[queries[i][1]]&1)==0){
-                s+=nums[queries[i][1]];
-                map.put(queries[i][1],nums[queries[i][1]]);
+            if((y&1)==0){
+                s+=y;
+                map.put(x,y);
             }
             arr[i]=s;
         }
