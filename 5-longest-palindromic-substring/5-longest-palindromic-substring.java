@@ -4,15 +4,19 @@ class Solution {
         int l=s.length();
         if(l>1){
             int skp=1;
-            for(int i=0;i<l;i++){
-                for(int j=i+skp;j<=l;j++){
+            int i=0,j=i+skp;
+            while(j<=l){
+                while(j<=l){
                     String t=s.substring(i,j);
                     int n=t.length();
                     if(isPalin(t)&&n>res.length()){
                         res=t;
                         skp=n;
                     }
+                    j++;
                 }
+                i++;
+                j=i+skp;
             }
         }
         else
