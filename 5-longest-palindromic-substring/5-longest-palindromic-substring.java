@@ -3,8 +3,7 @@ class Solution {
         String res="";
         int l=s.length();
         if(l>1){
-            int skp=1;
-            int i=0,j=i+skp;
+            int i=0,skp=1,j=i+skp;
             while(j<=l){
                 while(j<=l){
                     String t=s.substring(i,j);
