@@ -8,10 +8,9 @@ class Solution {
             while(j<=l){
                 while(j<=l){
                     String t=s.substring(i,j);
-                    int n=t.length();
-                    if(isPalin(t)&&n>res.length()){
+                    if(isPalin(t)&&t.length()>res.length()){
                         res=t;
-                        skp=n;
+                        skp=t.length();
                     }
                     j++;
                 }
