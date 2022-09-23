@@ -1,3 +1,7 @@
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+
 class Solution {
 
     public List<Integer> findSubstring(String s, String[] words) {
