@@ -1,13 +1,13 @@
 class Solution {
     public String pushDominoes(String dominoes) {
         int l = dominoes.length();
+        char[] arr = dominoes.toCharArray();
         int[] forces = new int[l];
         int force = 0;
         for (int i = 0; i < l; i++) {
-            char ch = dominoes.charAt(i);
-            if (ch == 'R')
+            if (arr[i] == 'R')
                 force = l;
-            else if (ch == 'L')
+            else if (arr[i] == 'L')
                 force = 0;
             else
                 force = Math.max(force - 1, 0);
@@ -16,10 +16,9 @@ class Solution {
         }
         force = 0;
         for (int i = l - 1; i >= 0; i--) {
-            char ch = dominoes.charAt(i);
-            if (ch == 'L')
+            if (arr[i] == 'L')
                 force = l;
-            else if (ch == 'R')
+            else if (arr[i] == 'R')
                 force = 0;
             else
                 force = Math.max(force - 1, 0);
