@@ -8,7 +8,6 @@ import java.util.Map.Entry;
 
 class Solution {
     public List<String> topKFrequent(String[] words, int k) {
-        Arrays.sort(words);
         TreeMap<String, Integer> map = new TreeMap<String, Integer>();
         for (int i = 0, c = 0; i < words.length; i++) {
             c = map.getOrDefault(words[i], 0);
