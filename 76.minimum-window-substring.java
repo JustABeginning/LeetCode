@@ -56,12 +56,18 @@ class Solution {
                     ans[2] = end;
                 }
 
+                // The character at the position pointed by the
+                // `Left` pointer is no longer a part of the window.
                 windowCounts.put(c, windowCounts.get(c) - 1);
                 if (dictT.containsKey(c) && windowCounts.get(c).intValue() < dictT.get(c).intValue()) {
                     formed--;
                 }
+
+                // Move the left pointer ahead, this would help to look for a new window.
                 l++;
             }
+
+            // Keep expanding the window once we are done contracting.
             r++;
         }
         return ans[0] == -1 ? "" : s.substring(ans[1], ans[2] + 1);
