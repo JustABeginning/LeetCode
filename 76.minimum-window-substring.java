@@ -37,6 +37,8 @@ class Solution {
             int count = windowCounts.getOrDefault(c, 0);
             windowCounts.put(c, count + 1);
 
+            // If the frequency of the current character added equals to the
+            // desired count in t then increment the formed count by 1.
             if (dictT.containsKey(c) && windowCounts.get(c).intValue() == dictT.get(c).intValue()) {
                 formed++;
             }
