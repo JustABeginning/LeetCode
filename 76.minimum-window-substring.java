@@ -26,6 +26,7 @@ class Solution {
 
         int l = 0, r = 0, formed = 0;
         Map<Character, Integer> windowCounts = new HashMap<Character, Integer>();
+        // ans list of the form (window length, left, right)
         int[] ans = { -1, 0, 0 };
 
         // Look for the characters only in the filtered list instead of entire s.
